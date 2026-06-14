@@ -1,0 +1,16 @@
+{
+  "name": "ogma-workspace",
+  "private": true,
+  "packageManager": "yarn@4.9.2",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "yarn workspaces foreach -A run build",
+    "dev": "yarn workspace @hcgstudio/ogma dev",
+    "ogma": "yarn workspace @hcgstudio/ogma ogma",
+    "storybook": "yarn workspace @hcgstudio/ogma-storybook storybook",
+    "build-storybook": "yarn workspace @hcgstudio/ogma-storybook build-storybook",
+    "typecheck": "yarn workspaces foreach -A run typecheck"
+  }
+}
