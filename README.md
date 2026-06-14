@@ -50,10 +50,3 @@ yarn install
 yarn typecheck
 yarn dev
 ```
-
-Storybook is intentionally isolated in `packages/storybook`:
-
-```bash
-yarn storybook
-yarn build-storybook
-```
