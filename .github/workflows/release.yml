@@ -1,9 +1,10 @@
 name: Release
 
 on:
-  release:
-    types:
-      - published
+  push:
+    tags:
+      - "v*"
+      - "[0-9]*"
 
 permissions:
   contents: read
@@ -38,7 +39,7 @@ jobs:
 
       - name: Verify release tag matches package version
         env:
-          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          RELEASE_TAG: ${{ github.ref_name }}
         run: |
           package_version="$(node -p "require('./packages/ogma/package.json').version")"
           tag_version="${RELEASE_TAG#v}"
