@@ -51,4 +51,4 @@ jobs:
 
       - name: Publish package
         working-directory: packages/ogma
-        run: npm publish --access public
+        run: yarn npm publish --access public --provenance
