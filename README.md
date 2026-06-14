@@ -4,6 +4,16 @@ Ogma is an open-source, local-first design viewer for AI-assisted product design
 
 The npm package is `@hcgstudio/ogma`. It provides a Node CLI, a local review server, a React JSX prototype viewer, pinned annotations, stable feedback IDs, a feedback queue, and a URL-based skill contract for Codex and Claude Code.
 
+## For Human: Agent Skill
+
+Install: Copy the following to your code agent:
+
+```text
+Install Skill: https://raw.githubusercontent.com/hcgstudio/ogma/main/docs/skills/ogma/SKILL.md
+```
+
+The skill explains how agents should create JSX screens, write product notes, install `@hcgstudio/ogma`, start the local review server, and preserve feedback IDs such as `OG-001` when applying edits.
+
 ## Install And Start
 
 ```bash
@@ -17,16 +27,6 @@ The default review URL is `http://localhost:4317/review`. `scaffold` creates mis
 - `designs/ogma/review.tsx` for JSX prototype screens
 - `designs/ogma/product-notes.md` for product design notes
 - `.ogma/session.json` for persisted annotations and feedback IDs
-
-## Agent Skill URL
-
-Install: Copy the following to your code agent:
-
-```text
-Install Skill: https://raw.githubusercontent.com/hcgstudio/ogma/main/docs/skills/ogma/SKILL.md
-```
-
-The skill explains how agents should create JSX screens, write product notes, install `@hcgstudio/ogma`, start the local review server, and preserve feedback IDs such as `OG-001` when applying edits.
 
 ## Commands
 
